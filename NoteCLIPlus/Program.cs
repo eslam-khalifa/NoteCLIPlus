@@ -1,4 +1,6 @@
-﻿namespace NoteCLIPlus
+﻿using NoteCLIPlus.Commands;
+
+namespace NoteCLIPlus
 {
     class Program
     {
@@ -8,14 +10,14 @@
             List,
             Search,
             Remove,
-            Weather,
             Exit
         }
 
-        public static bool InputCheck(ref string? input)
+        public static string PreprocessingInput(string input) => input.ToLower().Trim(' ');
+
+        public static bool IsValidInput(string? input)
         {
             if (input == null) return false;
-            input = input.ToLower().Trim(' ');
             foreach (var command in Enum.GetValues(typeof(Commands)))
             {
                 if (input == command?.ToString()?.ToLower()) return true;
@@ -26,33 +28,39 @@
         public static void Main()
         {
             Console.WriteLine("Welcome to NoteCLIPlus!");
-            Console.Write("Please enter a command (add, list, search, remove, weather, exit): ");
-            string? input = Console.ReadLine();
-            while (!InputCheck(ref input))
+            while (true)
             {
-                Console.Write("You Typed a wrong command! Enter a valid command (add, list, search, remove, weather, exit): ");
-                input = Console.ReadLine();
-            }
-            switch (input)
-            {
-                case "add":
-                    Console.WriteLine("Add command selected.");
-                    break;
-                case "list":
-                    Console.WriteLine("List command selected.");
-                    break;
-                case "search":
-                    Console.WriteLine("Search command selected.");
-                    break;
-                case "remove":
-                    Console.WriteLine("Remove command selected.");
-                    break;
-                case "weather":
-                    Console.WriteLine("Weather command selected.");
-                    break;
-                case "exit":
-                    Console.WriteLine("Exiting the application...");
-                    return;
+                Console.Write("Please enter a command (add, list, search, remove, exit): ");
+                string? input = Console.ReadLine();
+                while (!IsValidInput(input))
+                {
+                    Console.Write("You Typed a wrong command! Enter a valid command (add, list, search, remove, exit): ");
+                    input = Console.ReadLine();
+                }
+                input = PreprocessingInput(input!);
+                switch (input)
+                {
+                    case "add":
+                        var add = new AddNoteCommand();
+                        add.Execute();
+                        break;
+                    case "list":
+                        var list = new ListNotesCommand();
+                        list.Execute();
+                        break;
+                    case "search":
+                        var search = new SearchNoteCommand();
+                        search.Execute();
+                        break;
+                    case "remove":
+                        var remove = new RemoveNoteCommand();
+                        remove.Execute();
+                        break;
+                    case "exit":
+                        var exit = new ExitCommand();
+                        exit.Execute();
+                        return;
+                }
             }
         }
     }
