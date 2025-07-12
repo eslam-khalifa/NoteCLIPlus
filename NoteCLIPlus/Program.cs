@@ -23,7 +23,7 @@
             return false;
         }
 
-        public static void Main(string[] args)
+        public static void Main()
         {
             Console.WriteLine("Welcome to NoteCLIPlus!");
             Console.Write("Please enter a command (add, list, search, remove, weather, exit): ");
