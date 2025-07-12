@@ -1,0 +1,14 @@
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\bin\Debug\net8.0\NoteCLIPlus.exe
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\bin\Debug\net8.0\NoteCLIPlus.deps.json
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\bin\Debug\net8.0\NoteCLIPlus.runtimeconfig.json
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\bin\Debug\net8.0\NoteCLIPlus.dll
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\bin\Debug\net8.0\NoteCLIPlus.pdb
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\NoteCLIPlus.GeneratedMSBuildEditorConfig.editorconfig
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\NoteCLIPlus.AssemblyInfoInputs.cache
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\NoteCLIPlus.AssemblyInfo.cs
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\NoteCLIPlus.csproj.CoreCompileInputs.cache
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\NoteCLIPlus.dll
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\refint\NoteCLIPlus.dll
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\NoteCLIPlus.pdb
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\NoteCLIPlus.genruntimeconfig.cache
+D:\github_repos\NoteCLIPlus\NoteCLIPlus\obj\Debug\net8.0\ref\NoteCLIPlus.dll
